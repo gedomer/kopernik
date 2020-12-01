@@ -1,0 +1,38 @@
+  version: '3'
+
+  services:
+    postgres_db:
+      container_name: kopernik_db
+      restart: always
+      image: postgres:12
+      ports:
+        - "5432"       
+      env_file:
+        - .env
+      volumes:
+      - postgres_data:/var/lib/postgresql/data
+      networks:
+        - postgres_network
+
+    web:
+      container_name: kopernik_web
+      env_file:
+        - .env
+      build:
+        context: .
+        dockerfile: dockering/django/Dockerfile
+      volumes:
+      - .:/code
+      depends_on:
+        - postgres_db
+      networks:
+        - postgres_network
+      command: bash -c "while !</dev/tcp/postgres_db/5432; do sleep 1; done; python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+      ports:
+        - "8000:8000"
+
+  networks:
+    postgres_network:
+      driver: bridge
+  volumes:
+    postgres_data:

@@ -1,0 +1,209 @@
+[{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$dBhNjLmLLSM8$sqLbejB8O4UrsB6dWAkN7TCtq2p3bjSvkjbCy0Y4auw=",
+        "last_login": "2020-12-01T21:30:31Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "admin",
+        "last_name": "admin",
+        "email": "admin@kopernik.pizza",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-12-01T17:47:58Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$JeAmZ5SyVNaK$FFI0B8D5MIZiuCi6GcVqiP2HS+gwfPx/bioKLgUjWpY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "testuser",
+        "first_name": "Test",
+        "last_name": "User1",
+        "email": "testuser1@kopernik.pizza",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-12-01T17:51:25Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$RRf13e7NJS4e$KWJZkrvLZFzTIPdjcXUyrU2QtJaRlSbtvyQOUYJ2/OA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "testuser2",
+        "first_name": "Test",
+        "last_name": "User2",
+        "email": "testuser2@kopernik.pizza",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-12-01T17:52:02Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$OkySkxhHL6Qw$P6gltPkC4pU69WkAIc5E/E/3GNcD00WNPjQHV/nsqkM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "testuser3",
+        "first_name": "Test",
+        "last_name": "User3",
+        "email": "testuser3@kopernik.pizza",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-12-01T17:52:42Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}, {
+    "model": "kopernik.customer",
+    "pk": 2,
+    "fields": {
+        "address": "Test User 1 Address"
+    }
+}, {
+    "model": "kopernik.customer",
+    "pk": 3,
+    "fields": {
+        "address": "Test User 2 Address"
+    }
+}, {
+    "model": "kopernik.customer",
+    "pk": 4,
+    "fields": {
+        "address": "Test User 3 Address"
+    }
+}, {
+    "model": "kopernik.order",
+    "pk": "3eb1c1da-8f14-4ce5-8034-ea8bfacbf857",
+    "fields": {
+        "customer": 4,
+        "status": "delivered",
+        "address": "Test Delivered Address",
+        "created_at": "2020-12-01T17:59:10.074Z",
+        "updated_at": "2020-12-01T17:59:12.027Z"
+    }
+}, {
+    "model": "kopernik.order",
+    "pk": "9847fed4-0bde-4613-9bce-8ccdfa0172bf",
+    "fields": {
+        "customer": 3,
+        "status": "received",
+        "address": "Test Received Address",
+        "created_at": "2020-12-01T17:58:52.409Z",
+        "updated_at": "2020-12-01T17:58:52.409Z"
+    }
+}, {
+    "model": "kopernik.order",
+    "pk": "cd57eacc-820e-47e2-a49d-d390075f8ad1",
+    "fields": {
+        "customer": 4,
+        "status": "on-the-way",
+        "address": "Test On the way Address",
+        "created_at": "2020-12-01T17:59:30.132Z",
+        "updated_at": "2020-12-01T17:59:30.132Z"
+    }
+}, {
+    "model": "kopernik.order",
+    "pk": "f9ac43c1-8b51-42f2-8314-6f74d1a2e151",
+    "fields": {
+        "customer": 2,
+        "status": "cancelled",
+        "address": "Cancelled Address",
+        "created_at": "2020-12-01T17:58:14.017Z",
+        "updated_at": "2020-12-01T17:58:14.017Z"
+    }
+}, {
+    "model": "kopernik.pizza",
+    "pk": 1,
+    "fields": {
+        "name": "Neapolitan Pizza",
+        "description": ""
+    }
+}, {
+    "model": "kopernik.pizza",
+    "pk": 2,
+    "fields": {
+        "name": "Sicilian Pizza",
+        "description": ""
+    }
+}, {
+    "model": "kopernik.pizza",
+    "pk": 3,
+    "fields": {
+        "name": "Greek Pizza",
+        "description": ""
+    }
+}, {
+    "model": "kopernik.pizza",
+    "pk": 4,
+    "fields": {
+        "name": "California Pizza",
+        "description": ""
+    }
+}, {
+    "model": "kopernik.orderitem",
+    "pk": 1,
+    "fields": {
+        "order": "f9ac43c1-8b51-42f2-8314-6f74d1a2e151",
+        "pizza": 1,
+        "size": 2,
+        "quantity": 2
+    }
+}, {
+    "model": "kopernik.orderitem",
+    "pk": 2,
+    "fields": {
+        "order": "f9ac43c1-8b51-42f2-8314-6f74d1a2e151",
+        "pizza": 3,
+        "size": 1,
+        "quantity": 1
+    }
+}, {
+    "model": "kopernik.orderitem",
+    "pk": 3,
+    "fields": {
+        "order": "9847fed4-0bde-4613-9bce-8ccdfa0172bf",
+        "pizza": 4,
+        "size": 4,
+        "quantity": 14
+    }
+}, {
+    "model": "kopernik.orderitem",
+    "pk": 4,
+    "fields": {
+        "order": "9847fed4-0bde-4613-9bce-8ccdfa0172bf",
+        "pizza": 3,
+        "size": 3,
+        "quantity": 2
+    }
+}, {
+    "model": "kopernik.orderitem",
+    "pk": 5,
+    "fields": {
+        "order": "3eb1c1da-8f14-4ce5-8034-ea8bfacbf857",
+        "pizza": 3,
+        "size": 2,
+        "quantity": 2
+    }
+}, {
+    "model": "kopernik.orderitem",
+    "pk": 6,
+    "fields": {
+        "order": "cd57eacc-820e-47e2-a49d-d390075f8ad1",
+        "pizza": 4,
+        "size": 2,
+        "quantity": 2
+    }
+}]
